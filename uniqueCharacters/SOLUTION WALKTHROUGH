@@ -8,3 +8,21 @@ SOLUTION-1: (my own)
      --> if not : check if the checker has reached just behind the selector
                     --> reached behind : increase our counter by one
                     --> not reached : DO NOTHING
+
+ISSUE WITH ABOVE SOLUTION: If same character is present somewhere behind our selector & our selector
+                           was present at this character before, this selected character should not be checked once again
+                           because it implies that this character is a unique character and we are performing the check once again.
+                           
+        A better solution: We should remember all unique characters traversed uptil str[i].length-1 
+                           and from this memory we should recall if the selected character in the string 
+                           is present in our memory that has stored all unique characters uptil str[i].length-1 
+                           And according to me this will be possible with array. Array will act as our memory that stores
+                           all unique characters uptil str[i].length-1 
+                           
+
+SOLUTION:2 (using array, my own).
+   1. We will initialise an an array that will contain the first character of the string i.e. [str[0]]
+   2. When selector is at a particular place in the string, will will check if the character which is selected 
+      in the string is present inside the array which hold unique characters.
+       --> if present : select the next character
+       --> if not present: push the selected charcater inside array.
