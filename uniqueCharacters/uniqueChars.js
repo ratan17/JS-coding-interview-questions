@@ -1,4 +1,6 @@
 // given a string find the NUMBER of unique characters in that string : turnIP innovations
+
+//solution-1: my own
 let str = "eabcrtdhheleloohe";
 let count=1;
 
@@ -15,3 +17,26 @@ for(var i = 1; i<str.length; i++){
 }
 
 console.log(`count: ${count}`);
+
+
+//solution two: USING ARRAY to reduce repeated checking on the unique character which was done in the above 
+//method
+
+let uniqueChars = [str[0]];
+
+  for(var i=0; i<str.length; i++){
+
+    for(var j=0; j<uniqueChars.length; j++){
+      console.log(`i:${i}  ,j:${j}, uniqueChars: ${uniqueChars}`);
+      if(str[i]===uniqueChars[j]){
+        break;
+      }
+
+      if(j===uniqueChars.length-1 && uniqueChars[j]!==str[i]){
+        uniqueChars.push(str[i]);
+      }
+    }
+  }
+
+console.log(uniqueChars);
+
