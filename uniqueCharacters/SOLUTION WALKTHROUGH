@@ -1,0 +1,10 @@
+SOLUTION-1: (my own)
+  1. For counting unique characters, we will keep a counter named as 'count' initialised to 1.
+  2. Select each character in the string (starting from 2nd character as the first character in the string will be unique always)
+     and check all the previous characters starting from first character till one character behind our selector
+     (to check the previous characters we'll keep a checker)
+     to know if there's any same character present in the string other at other position. 
+     --> if same character present : select next character
+     --> if not : check if the checker has reached just behind the selector
+                    --> reached behind : increase our counter by one
+                    --> not reached : DO NOTHING
