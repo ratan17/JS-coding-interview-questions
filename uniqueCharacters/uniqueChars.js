@@ -27,7 +27,7 @@ let uniqueChars = [str[0]];
   for(var i=0; i<str.length; i++){
 
     for(var j=0; j<uniqueChars.length; j++){
-      console.log(`i:${i}  ,j:${j}, uniqueChars: ${uniqueChars}`);
+      
       if(str[i]===uniqueChars[j]){
         break;
       }
@@ -38,5 +38,5 @@ let uniqueChars = [str[0]];
     }
   }
 
-console.log(uniqueChars);
+console.log(uniqueChars.length);
 
