@@ -26,3 +26,5 @@ SOLUTION:2 (using array, my own).
       in the string is present inside the array which hold unique characters.
        --> if present : select the next character
        --> if not present: push the selected charcater inside array.
+   3. After all the checking has happened, check the array's length to know
+      the number of unique characters.
