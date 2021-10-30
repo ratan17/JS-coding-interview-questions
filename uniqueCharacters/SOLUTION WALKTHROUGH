@@ -3,7 +3,7 @@ SOLUTION-1: (my own)
   2. Select each character in the string (starting from 2nd character as the first character in the string will be unique always)
      and check all the previous characters starting from first character till one character behind our selector
      (to check the previous characters we'll keep a checker)
-     to know if there's any same character present in the string other at other position. 
+     to know if there's any same character present in the string at other position. 
      --> if same character present : select next character
      --> if not : check if the checker has reached just behind the selector
                     --> reached behind : increase our counter by one
@@ -22,8 +22,8 @@ ISSUE WITH ABOVE SOLUTION: If same character is present somewhere behind our sel
 
 SOLUTION:2 (using array, my own).
    1. We will initialise an an array that will contain the first character of the string i.e. [str[0]]
-   2. When selector is at a particular place in the string, will will check if the character which is selected 
-      in the string is present inside the array which hold unique characters.
+   2. When selector is at a particular place in the string, we will check if the character which is selected 
+      in the string is present inside the array which holds unique characters.
        --> if present : select the next character
        --> if not present: push the selected charcater inside array.
    3. After all the checking has happened, check the array's length to know
